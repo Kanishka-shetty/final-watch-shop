@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Shopping Experience</title>
+    <link rel="stylesheet" href="index.css">
+      <!- {% load static %} -->
+    <!-- <link rel="stylesheet" href="{% static 'index.css' %}"> -->
+<!-- </head>
+<body>
+<header>
+    <h1>Watch Shopping Experience</h1>
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Services</a>
+    </nav>
+</header>
+<main action = "">
+    <h2>Welcome to Watch Shopping Experience</h2>
+    <div class="form-box">
+        <form id="watch-form" action="http://127.0.0.1:8000/api/watches/create/" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="watch-brand">Select Watch Brand</label>
+                <select id="watch-brand">
+                    <option value="Sonata-WT-356">Sonata WT-356</option>
+                    <option value="Rolex">Rolex</option>
+                    <option value="Casio">Casio</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="watch-model">Select Watch</label>
+                <select id="watch-model">
+                    <option value="Sonata-ET">Sonata ET</option>
+                    <option value="Rolex-Submariner">Rolex Submariner</option>
+                    <option value="Casio-G-Shock">Casio G-Shock</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" id="price" placeholder="Enter price">
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" id="image">
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</main>
+<h2>Watches</h2>
+<div id = "watches-container"></div>
+<footer>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Services</a>
+        <a href="#">About Us</a>
+    </nav>
+</footer> --> 
+<!-- <script src="{% static 'scriptwatch.js' %}"></script> -->
+ <!-- <script src="scriptwatch.js"></script>
+</body>
+</html>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Shopping Experience</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}"> -->
+</head>
+<body>
+<header>
+    <h1>Watch Shopping Experience</h1>
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Services</a>
+    </nav>
+</header>
+<main>
+    <h2>Welcome to Watch Shopping Experience</h2>
+    <div class="form-box">
+        <!-- Added CSRF token and ensured compatibility with the form submission logic -->
+        <form id="watch-form" action="http://127.0.0.1:8000/api/watches/create/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="watch-name">Watch Name</label>
+                <input type="text" id="watch-name" name="name" placeholder="Enter watch name" required>
+            </div>
+            <div class="form-group">
+                <label for="watch-brand">Select Watch Brand</label>
+                <select id="watch-brand" name="brand">
+                    <option value="Sonata-WT-356">Sonata WT-356</option>
+                    <option value="Rolex">Rolex</option>
+                    <option value="Casio">Casio</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="watch-model">Select Watch</label>
+                <select id="watch-model" name="model">
+                    <option value="Sonata-ET">Sonata ET</option>
+                    <option value="Rolex-Submariner">Rolex Submariner</option>
+                    <option value="Casio-G-Shock">Casio G-Shock</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price" placeholder="Enter price" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" id="image" name="image" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</main>
+<h2>Watches</h2>
+<div id="watches-container"></div>
+<footer>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Services</a>
+        <a href="#">About Us</a>
+    </nav>
+</footer>
+<!-- <script src="{% static 'scriptwatch.js' %}"></script> -->
+<script src="scriptwatch.js"></script>
+</body>
+</html>
+
