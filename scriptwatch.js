@@ -101,7 +101,7 @@ fetch("https://kanishkashetty.pythonanywhere.com/api/watches/create/", {
     });
 
 // Function to fetch and display the list of watches
-const baseurl = "http://127.0.0.1:8000/"
+const baseurl = "https://kanishkashetty.pythonanywhere.com/"
 
 function displayWatches() {
     fetch("https://kanishkashetty.pythonanywhere.com/api/watches/")
