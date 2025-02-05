@@ -58,7 +58,8 @@ function displayWatches() {
             // Loop through each watch and create its HTML structure
             data.forEach((watch) => {
                 // const imageurl = baseurl + watch.image
-               const imageurl = `${baseurl}media/${watch.image}`;
+               // const imageurl = `${baseurl}media/${watch.image}`;
+                const imageurl = watch.image.startsWith("http") ? watch.image : `${baseurl}${watch.image}`;
                 console.log("Image URL:", imageurl);
                 const watchCard = `
                 <div class="watch-list" id="watch-list">
