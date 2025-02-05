@@ -171,6 +171,15 @@ footer a:hover {
         font-size: 16px; /* Adjusts font size for smaller screens */
     }
 }
+.watch-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Space around the grid */
+    margin: 0 auto; /* Center the grid */
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
 
   
 
