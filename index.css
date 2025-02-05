@@ -182,7 +182,7 @@ footer a:hover {
     box-sizing: border-box; /* Include padding in width */
 }
 img {
-    width: 150%;  /* Increase the width beyond 100% of the container */
+    width: 120%;  /* Increase the width beyond 100% of the container */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Keeps the image from stretching */
 }
