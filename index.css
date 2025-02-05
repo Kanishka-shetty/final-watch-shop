@@ -173,12 +173,13 @@ footer a:hover {
 }
 .watch-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between items */
-    padding: 20px; /* Space around the grid */
-    margin: 0 auto; /* Center the grid */
-    max-width: 1200px; /* Optional: Limit the maximum width */
-    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Spacing between items */
+    padding: 20px; /* Inner spacing */
+    margin-left: auto; /* Align to the center */
+    margin-right: auto; /* Align to the center */
+    max-width: 1200px; /* Limit the width for large screens */
+    box-sizing: border-box; /* Include padding in width */
 }
 
   
