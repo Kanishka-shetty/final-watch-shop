@@ -146,20 +146,23 @@ footer a:hover {
   }
 @media (max-width: 768px) {
     .watch-list {
-        display: flex;
-        flex-direction: column; /* Stacks items vertically */
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr; /* Makes it one image per row */
+        gap: 20px; /* Adds space between images */
     }
 
     .watch {
-        width: 90%; /* Adjust width to prevent overlap */
-        margin-bottom: 10px; /* Add spacing */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px; /* Adjust padding for better spacing */
     }
 
     .watch img {
-        width: 100%; /* Make sure images resize properly */
+        width: 90%; /* Adjust image size for smaller screens */
         height: auto;
-        max-width: 200px; /* Set max-width if needed */
+        max-width: 250px; /* Set a max width for consistency */
     }
 }
 
