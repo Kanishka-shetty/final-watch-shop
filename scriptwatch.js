@@ -59,6 +59,7 @@ function displayWatches() {
             data.forEach((watch) => {
                 // const imageurl = baseurl + watch.image
                const imageurl = `${baseurl}media/${watch.image}`;
+                console.log("Image URL:", imageurl);
                 const watchCard = `
                 <div class="watch-list" id="watch-list">
                     <div class="watch">
