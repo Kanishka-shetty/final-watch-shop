@@ -121,7 +121,7 @@ footer a:hover {
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
-    max-width: 300px; /* Increase the max width */
+    max-width: 1200px; /* Increase the max width */
     margin: 0 auto;  /* Center the container */
 }
   
