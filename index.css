@@ -114,19 +114,17 @@ footer a:hover {
     gap: 20px;
   }
   
-  /* Individual watch items */
-  #watches-container > div {
-    background-color: #fff;
-    padding: 10px;
-    width: 30%;  /* Width of each watch item */
-    border: 2px solid #ddd;
-    text-align: center;
+#watches-container {
+    background-color: #f0f0f0;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Increase the max width */
+    margin: 0 auto;  /* Center the container */
+}
   
-  /* Increase the image size */
   #watches-container > div img {
     width: 200px;  /* Increased image size */
     height: auto;  /* Maintain aspect ratio */
