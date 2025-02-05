@@ -1,47 +1,4 @@
 
-// // Send watch data to DB
-// document.querySelector(".form-box form")
-// .addEventListener("submit", function(event){
-//     event.preventDefault();
-//     const formdata = new FormData(this)
-//     fetch("https://kanishkashetty.pythonanywhere.com/api/watches/create/",{
-//         method: "POST",
-//         body: formdata
-//     })
-//     .then ((response)=> response.json())
-//     .then((data)=> {
-//         alert("Watch added successfully");
-//         displayWatches();
-//     })
-//     .catch((error)=>console.error("Error", error));
-// });
-
-// //Get all the list of API's
-// function displayWatches(){
-//     fetch("https://kanishkashetty.pythonanywhere.com/api/watches/")
-//     .then((response)=> response.json())
-//     .then((data)=>{
-//         const container = document.getElementById("watches-container");
-//         container.innerHTML= "";
-
-//         data.forEach((watch)=>{
-//             const watchCard = `                
-//                 <div class="watch-list" id="watch-list">
-//                     <div class="watch">
-//                         <img src = "${watch.image} " alt= " image" />
-//                          <p class = "watch-name">Watch Name:${watch.name}</p>
-//                          <p class = "watch-model">Watch Brand:${watch.brand}</p>
-//                          <p class = "watch-price">Price:${watch.price}</p>
-//                     </div>
-//                 </div>
-//                 `;
-//                 container.innerHTML += watchCard;
-//             });
-//     })
-//     .catch((error) => console.error("Error fetching watches", error));
-// }
-
-// document.addEventListener("DOMContentLoaded", displayWatches)
 
 
 // Helper function to get the CSRF token from the form or page
@@ -63,20 +20,8 @@ document.querySelector(".form-box form").addEventListener("submit", function (ev
     formdata.append("price", document.getElementById("price").value);
     formdata.append("image", document.getElementById("image").files[0]);
 
-    // Send the POST request with the form data
-    // fetch("https://kanishkashetty.pythonanywhere.com/api/watches/create/", {
-    //     method: "POST",
-    //     headers: {
-    //         "X-CSRFToken": getCSRFToken(), // Include CSRF token in the headers
-    //     },
-    //     body: formdata, // Include the form data
-    // })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         alert("Watch added successfully"); // Notify user of success
-    //         displayWatches(); // Refresh the list of watches
-    //     })
-    //     .catch((error) => console.error("Error", error)); // Handle any errors
+   
+   
 // ---------------------------
 fetch("https://kanishkashetty.pythonanywhere.com/api/watches/create/", {
     method: "POST",
@@ -112,7 +57,8 @@ function displayWatches() {
 
             // Loop through each watch and create its HTML structure
             data.forEach((watch) => {
-                const imageurl = baseurl + watch.image
+                // const imageurl = baseurl + watch.image
+               const imageurl = `${baseurl}media/${watch.image}`;
                 const watchCard = `
                 <div class="watch-list" id="watch-list">
                     <div class="watch">
