@@ -182,15 +182,21 @@ footer a:hover {
     box-sizing: border-box; /* Include padding in width */
 }
 img {
-    max-width: 100%;
-    height: auto; /* Ensures the height adjusts automatically */
-    object-fit: cover; /* Or 'contain' for a more uniform scaling */
+    width: 150%;  /* Increase the width beyond 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Keeps the image from stretching */
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust size here */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the size to make it wider */
     gap: 1rem;
 }
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
