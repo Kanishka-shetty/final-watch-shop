@@ -4,7 +4,7 @@
 // .addEventListener("submit", function(event){
 //     event.preventDefault();
 //     const formdata = new FormData(this)
-//     fetch("http://127.0.0.1:8000/api/watches/create/",{
+//     fetch("https://kanishkashetty.pythonanywhere.com/api/watches/create/",{
 //         method: "POST",
 //         body: formdata
 //     })
@@ -18,7 +18,7 @@
 
 // //Get all the list of API's
 // function displayWatches(){
-//     fetch("http://127.0.0.1:8000/api/watches/")
+//     fetch("https://kanishkashetty.pythonanywhere.com/api/watches/")
 //     .then((response)=> response.json())
 //     .then((data)=>{
 //         const container = document.getElementById("watches-container");
@@ -64,7 +64,7 @@ document.querySelector(".form-box form").addEventListener("submit", function (ev
     formdata.append("image", document.getElementById("image").files[0]);
 
     // Send the POST request with the form data
-    // fetch("http://127.0.0.1:8000/api/watches/create/", {
+    // fetch("https://kanishkashetty.pythonanywhere.com/api/watches/create/", {
     //     method: "POST",
     //     headers: {
     //         "X-CSRFToken": getCSRFToken(), // Include CSRF token in the headers
@@ -78,7 +78,7 @@ document.querySelector(".form-box form").addEventListener("submit", function (ev
     //     })
     //     .catch((error) => console.error("Error", error)); // Handle any errors
 // ---------------------------
-fetch("http://127.0.0.1:8000/api/watches/create/", {
+fetch("https://kanishkashetty.pythonanywhere.com/api/watches/create/", {
     method: "POST",
     headers: {
         "X-CSRFToken": getCSRFToken(), // Include CSRF token in the headers
@@ -104,7 +104,7 @@ fetch("http://127.0.0.1:8000/api/watches/create/", {
 const baseurl = "http://127.0.0.1:8000/"
 
 function displayWatches() {
-    fetch("http://127.0.0.1:8000/api/watches/")
+    fetch("https://kanishkashetty.pythonanywhere.com/api/watches/")
         .then((response) => response.json())
         .then((data) => {
             const container = document.getElementById("watches-container");
