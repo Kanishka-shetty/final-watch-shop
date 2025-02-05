@@ -1,3 +1,4 @@
+console.log("🚀 JS File Loaded - Version 1.0");
 
 
 
