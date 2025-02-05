@@ -189,15 +189,17 @@ img {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem; /* adjust as needed */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Wider items */
+    gap: 1rem;
+    max-width: 1400px;  /* Ensure the grid fits within the page width */
+    margin: 0 auto;
+    padding: 20px;
 }
 .grid-item {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 
 
