@@ -182,7 +182,7 @@ footer a:hover {
     box-sizing: border-box; /* Include padding in width */
 }
 img {
-    max-width: 100%;
+    max-width: 200%;
     max-height: 100%;
     object-fit: cover; /* or 'contain' depending on your desired effect */
 }
